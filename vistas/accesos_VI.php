@@ -25,7 +25,7 @@ class accesos_VI
         <body class="hold-transition login-page">
         <div class="login-box">
         <div class="login-logo">
-            <a href="index.php"><b>Login</b> giutaca123</a>
+            <a href="index.php"><b>Login</b> Agropecuaria Venadillo</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -66,15 +66,6 @@ class accesos_VI
                 </div>
             </form>
 
-            <div class="social-auth-links text-center mb-3">
-                <p>- OR -</p>
-                <a href="#" class="btn btn-block btn-primary">
-                <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-danger">
-                <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                </a>
-            </div>
             <!-- /.social-auth-links -->
 
             <p class="mb-1">
