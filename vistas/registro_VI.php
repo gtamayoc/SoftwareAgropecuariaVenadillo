@@ -1,9 +1,9 @@
 <?php
-class accesos_VI
+class registro_VI
 {
     function __construct(){}
 
-    function iniciarSesion()
+    function registrarUsuario()
     {
         ?>
         <!DOCTYPE html>
@@ -11,7 +11,7 @@ class accesos_VI
         <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Examen Final</title>
+        <title>Examen Final 2</title>
 
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -25,12 +25,12 @@ class accesos_VI
         <body class="hold-transition login-page">
         <div class="login-box">
         <div class="login-logo">
-            <a href="index.php"><b>Login</b> Agropecuaria Venadillo</a>
+            <a href="index.php"><b>Login 2</b> Agropecuaria Venadillo</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-            <p class="login-box-msg">Iniciar Sesi&oacute;n</p>
+            <p class="login-box-msg">Registro</p>
 
             <form action="index.php" method="post">
                 <div class="input-group mb-3">
@@ -69,7 +69,7 @@ class accesos_VI
                 <a href="forgot-password.html">Se me olvido la contraseña</a>
             </p>
             <p class="mb-0">
-                <a href="#" onclick="verMenu()"  class="text-center">Registrar nuevo usuario</a>
+                <a href="#" onclick="verMenu('registrar_VI')"  class="text-center">Registrar nuevo usuario</a>
             </p>
             </div>
             <!-- /.login-card-body -->
@@ -83,15 +83,13 @@ class accesos_VI
         <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- AdminLTE App -->
         <script src="dist/js/adminlte.min.js"></script>
-
         <script>
-                function verMenu() {
-                    $.post('accesos_CO/salir', function() {
-                        location.href = "vistas/registro.php";
+                function verMenu(ruta) {
+                    $.post(ruta, function(respuesta) {
+                        $('#contenido').html(respuesta);
                     });
                 }
             </script>
-
         </body>
         </html>
         <?php
