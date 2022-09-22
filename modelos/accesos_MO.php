@@ -3,9 +3,9 @@ class accesos_MO
 {
     private $conexion;
     
-    function __construct($conexion)
+    function __construct($con)
     {
-        $this->conexion=$conexion;
+        $this->conexion=$con;
     }
 
     function iniciarSesion($usuario,$clave)
