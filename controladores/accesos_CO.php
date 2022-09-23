@@ -12,18 +12,18 @@ class accesos_CO
     
     function validateFormSession($array)
     {
-        $con=new ('sel');
+        $con=new conexion('sel');
          
-        $email=$array['email'];
-        $password=$array['password'];
+        $usuario=$array['usuario'];
+        $clave=$array['clave'];
 
-        if(empty($email)){exit("El usuario es obligatorio");}
-        if(empty($password)){exit("La clave es obligatoria");}
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){exit("Correo mal estructurado");}
+        if(empty($usuario)){exit("El usuario es obligatorio");}
+        if(empty($clave)){exit("La clave es obligatoria");}
+        if(!filter_var($usuario, FILTER_VALIDATE_EMAIL)){exit("Correo mal estructurado");}
 
         $accesos_MO=new accesos_MO($con);
 
-        $array_access=$accesos_MO->iniciarSesion($email,$password);
+        $array_access=$accesos_MO->iniciarSesion($usuario,$clave);
 
         if($array_access)
         {
